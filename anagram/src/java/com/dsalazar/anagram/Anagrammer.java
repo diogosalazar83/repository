@@ -25,17 +25,17 @@ public class Anagrammer {
 		Arrays.sort(array2);
 		
 		if (array1.length != array2.length) {
-			areAnagrams = false;
-			return areAnagrams;
+			setAreAnagrams(false);
+			return getAreAnagrams();
 		} else {
 			for (int i = 0; i < array1.length; i++) {
 				if (array1[i] != array2[i]) {
-					areAnagrams = false;
-					return areAnagrams;
+					setAreAnagrams(false);
+					return getAreAnagrams();
 				}
 			}
-			areAnagrams = true;
-			return areAnagrams;
+			setAreAnagrams(true);
+			return getAreAnagrams();
 		}
 	}
 	

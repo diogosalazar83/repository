@@ -29,12 +29,12 @@ public class AnagramController {
 
 
 	@GetMapping("/{string1}/{string2}")
-	public boolean areAnagrams(@PathVariable String string1, @PathVariable String string2) {
+	public Anagrammer areAnagrams(@PathVariable String string1, @PathVariable String string2) {
 		
 		try {
 			Anagrammer a = new Anagrammer();
 			a.areAnagrams(string1, string2);
-			return a.getAreAnagrams();
+			return a;
 		} catch (IllegalArgumentException e) {
 			throw new BadRequestException(e);
 		}

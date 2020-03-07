@@ -31,7 +31,7 @@ class AnagramControllerTest {
 	@Test
 	void testAreAnagrams() {
 		AnagramController ac = new AnagramController();
-		assertTrue(ac.areAnagrams("herpes", "sphere"));
+		assertTrue(ac.areAnagrams("herpes", "sphere").getAreAnagrams());
 		try {
 			ac.areAnagrams("..", "something");
 		} catch (BadRequestException e) {
